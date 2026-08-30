@@ -1,43 +1,24 @@
-# Cost Analysis: Why Speech Therapy Isn't Accessible
+# Speech Therapy Cost Analysis
 
-Research project proving that cost is the primary barrier to speech therapy access.
+This repository contains the static research site and supporting documents for a data-driven analysis of why speech therapy remains difficult to access for many people. The project highlights cost as a major barrier and includes charts, summaries, and the underlying dataset used for the analysis.
 
-## Quick Start
+## Included files
 
-### Files Needed
-- `index.html` (main research site)
-- `Cost_Analysis_Complete_WITH_CHARTS.xlsx`
-- `Cost_Analysis_Summary_FINAL.docx`
-- `master_research_dataset.csv`
+- `index.html` — public research microsite
+- `master_research_dataset.csv` — source dataset
+- `Cost_Analysis_Complete_WITH_CHARTS.xlsx` — full workbook with charts
+- `Cost_Analysis_Summary_FINAL.docx` — summary report
 
-### To Deploy to Netlify
+## Local preview
 
-1. Put all 4 files in a folder called `research/`
-2. Drag the folder to Netlify Drop: https://app.netlify.com/drop
-3. Done! You'll get a public URL like `cost-analysis-dhananjay.netlify.app`
+Open `index.html` directly in a browser, or serve the folder with any basic static file server.
 
-### To Push to GitHub
+## Deployment notes
 
-1. Create a new repository: `cost-analysis` or `research`
-2. Add all 4 files to the repo
-3. Push to GitHub
+This project is designed for static hosting, such as GitHub Pages or Netlify. No backend, API keys, or credentials are required to run the site.
 
-Then connect your GitHub repo to Netlify for auto-deploy on every push.
+## Security and publication review
 
-## What's Included
-
-- 5 interactive Flourish charts (embedded)
-- All research copy and methodology
-- Download links for Excel, Word, CSV files
-- Links to Fluent app and other projects
-- Mobile responsive design
-- Fluent color palette (bright teal #20B88D)
-
-## Notes
-
-- TODO: Update "Back to Portfolio" link when Portfolio Hub is live
-- TODO: Update "Speak Up" link when Speak Up site is live
-
-## Support
-
-Questions? Email: Thambi405@outlook.com
+- The repo does not contain any secret keys or credentials.
+- Public links and contact details should be reviewed before sharing widely.
+- The research files are intentionally included as part of the public project, but any future private or sensitive content should be kept out of the repo.
