@@ -1,0 +1,12 @@
+Category,Metric,Unit,Value,Source note,Citation,Date
+Market stats,US median household income (2024),USD,83730.0,Census report,web:1,2025-09-08
+Market stats,US stutter prevalence,count,3000000.0,NIDCD quick stats,web:2,2025-07-07
+Market stats,US stutter prevalence,percent,1.0,NIDCD quick stats,web:2,2025-07-07
+Market stats,Global stutter prevalence (guide estimate),count,70000000.0,Project guide estimate,file:1,2026-06-26
+SLP cost,Private speech therapy session cost low,USD,100.0,Recent cost source,web:5,2024-09-15
+SLP cost,Private speech therapy session cost high,USD,250.0,Recent cost source,web:5,2024-09-15
+App pricing,Stamurai monthly,USD,14.99,App Store listing,web:19,2023-04-09
+App pricing,BeneTalk monthly,USD,12.99,Project guide estimate,file:1,2026-06-26
+Insurance,Washington hearing-aid coverage cap per ear,USD,3000.0,WA hearing loss advocacy summary,web:54,2024-05-21
+Insurance,Washington HAAP patient cost monaural,USD,250.0,UW HAAP page,web:58,2026-06-26
+Insurance,Washington HAAP patient cost binaural,USD,550.0,UW HAAP page,web:58,2026-06-26

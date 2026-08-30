@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Analysis: Why Speech Therapy Isn't Accessible</title>
+    <style>
+        /* RESEARCH SITE STYLES - Fluent/Speak Up Color Palette */
+
+        /* Color Variables */
+        :root {
+            --primary: #20B88D;
+            --primary-hover: #1A9A77;
+            --bg-white: #FFFFFF;
+            --bg-light: #F0F9F6;
+            --text-primary: #2C2C2A;
+            --text-secondary: #888780;
+            --border: #D4EDE8;
+        }
+
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-white);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: var(--bg-light);
+            border-bottom: 0.5px solid var(--border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(29, 158, 117, 0.05) 0%, rgba(29, 158, 117, 0.02) 100%);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Charts Section */
+        .charts {
+            padding: 4rem 2rem;
+        }
+
+        .chart-block {
+            margin-bottom: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 0.5px solid var(--border);
+        }
+
+        .chart-block:last-child {
+            border-bottom: none;
+        }
+
+        .chart-block h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .chart-intro {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .chart-embed {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .chart-embed iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
+        /* Methodology Section */
+        .methodology {
+            padding: 4rem 2rem;
+            background-color: var(--bg-light);
+        }
+
+        .methodology h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .methodology p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Download Section */
+        .download {
+            padding: 4rem 2rem;
+        }
+
+        .download h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--text-primary);
+        }
+
+        .download > .container > p {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 16px;
+        }
+
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 2rem;
+            background-color: var(--bg-light);
+        }
+
+        .about h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .about p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--bg-white);
+            border-top: 0.5px solid var(--border);
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .footer-left {
+            flex: 1;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 1.5rem;
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        .footer-right a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-right a:hover {
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .intro-text {
+                font-size: 14px;
+            }
+
+            .chart-embed iframe {
+                height: 400px;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .footer-right {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .header {
+                padding: 2rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .intro-text {
+                font-size: 14px;
+            }
+
+            .chart-block h2 {
+                font-size: 18px;
+            }
+
+            .chart-embed iframe {
+                height: 300px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Research</div>
+            <div class="nav-links">
+                <a href="#intro">Home</a>
+                <a href="#charts">Research</a>
+                <a href="#download">Download</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header" id="intro">
+        <div class="container">
+            <h1>Cost Analysis: Why Speech Therapy Isn't Accessible</h1>
+            <p class="intro-text">
+                I researched the barriers keeping 90-95% of people who stutter from getting professional help. This analysis documents what I found: cost is the primary barrier. Traditional speech therapy costs $6,500 per year. Insurance covers only 35% on average. Explore the data below to understand the gap, and visit Fluent and Speak Up to see how I'm addressing it.
+            </p>
+        </div>
+    </header>
+
+    <!-- Charts Section -->
+    <section class="charts" id="charts">
+        <div class="container">
+            
+            <!-- Chart 1: Cost Comparison -->
+            <div class="chart-block">
+                <h2>Cost Comparison: Traditional vs. Digital Solutions</h2>
+                <p class="chart-intro">The price difference is stark. Traditional speech therapy costs thousands. Apps cost $150-180 per year. Fluent costs zero. Here's how they compare.</p>
+                <div class="chart-embed">
+                    <iframe src="https://public.flourish.studio/visualisation/29526622/?utm_source=embed" frameborder="0" scrolling="no" style="width:100%;height:600px;"></iframe>
+                </div>
+            </div>
+
+            <!-- Chart 2: Insurance Coverage -->
+            <div class="chart-block">
+                <h2>Insurance Coverage: The Access Gap</h2>
+                <p class="chart-intro">Even with insurance, most people aren't covered. Only about 30% have full coverage for speech therapy. The other 70% either have no coverage or partial coverage, meaning they pay most or all of the cost themselves.</p>
+                <div class="chart-embed">
+                    <iframe src="https://public.flourish.studio/visualisation/29526703/?utm_source=embed" frameborder="0" scrolling="no" style="width:100%;height:600px;"></iframe>
+                </div>
+            </div>
+
+            <!-- Chart 3: Access Barriers -->
+            <div class="chart-block">
+                <h2>Access Barriers: Why 90% Go Untreated</h2>
+                <p class="chart-intro">Cost is the #1 barrier, but it's not the only one. Geographic access, scheduling, and stigma also keep people from getting help. This chart shows the barriers teens and families face.</p>
+                <div class="chart-embed">
+                    <iframe src="https://public.flourish.studio/visualisation/29526757/?utm_source=embed" frameborder="0" scrolling="no" style="width:100%;height:600px;"></iframe>
+                </div>
+            </div>
+
+            <!-- Chart 4: Geographic Variation -->
+            <div class="chart-block">
+                <h2>Costs Across America: Geographic Variation</h2>
+                <p class="chart-intro">Cost varies dramatically by region. A speech therapy session in Texas might cost $100, but in New York it costs $175. This geographic variation means where you live determines what you'll pay.</p>
+                <div class="chart-embed">
+                    <iframe src="https://public.flourish.studio/visualisation/29526857/?utm_source=embed" frameborder="0" scrolling="no" style="width:100%;height:600px;"></iframe>
+                </div>
+            </div>
+
+            <!-- Chart 5: Market Reality -->
+            <div class="chart-block">
+                <h2>Market Reality: The Untreated Population</h2>
+                <p class="chart-intro">The numbers tell the story. 70 million people stutter globally. 3 million in the United States. But only 5-10% get professional treatment. That means 2.7-2.85 million US teens go without help, largely due to cost.</p>
+                <div class="chart-embed">
+                    <iframe src="https://public.flourish.studio/visualisation/29526895/?utm_source=embed" frameborder="0" scrolling="no" style="width:100%;height:600px;"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="methodology">
+        <div class="container">
+            <h2>Methodology</h2>
+            <p>This research synthesizes data from the National Institute on Deafness and Other Communication Disorders (NIDCD), U.S. Census Bureau, industry cost aggregators, and regional therapy provider estimates. I analyzed therapy costs, insurance reimbursement rates, app pricing, and market size to understand the barriers to speech therapy access. All sources are cited in the full research summary.</p>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <h2>Download the Full Research</h2>
+            <p>Want to dive deeper? Download the complete cost analysis with methodology, detailed findings, and full bibliography.</p>
+            
+            <div class="download-buttons">
+                <a href="./Cost_Analysis_Complete_WITH_CHARTS.xlsx" class="btn" download="Cost_Analysis_Complete_WITH_CHARTS.xlsx">
+                    📊 Download Excel Workbook
+                </a>
+                <a href="./Cost_Analysis_Summary_FINAL.docx" class="btn" download="Cost_Analysis_Summary_FINAL.docx">
+                    📄 Download Summary Report
+                </a>
+                <a href="./master_research_dataset.csv" class="btn" download="master_research_dataset.csv">
+                    📋 Download Raw Data
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About This Research</h2>
+            <p>I built this research to answer a question: why don't people who stutter get professional help? The answer wasn't complicated. Cost is the barrier. Not curiosity, not availability, not willingness. Cost.</p>
+            <p>This research is the foundation of the larger ecosystem I'm building. Fluent is the app solution. Speak Up is the resource support. Together, they prove that accessible, free support for people who stutter is possible.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    © 2026 Dhananjay Padmanabhan
+                </div>
+                <div class="footer-right">
+                    <!-- TODO: Update Portfolio Hub link when site is live -->
+                    <a href="https://dhananjay.netlify.app" target="_blank">Back to Portfolio</a>
+                    <a href="https://fluent.streamlit.app" target="_blank">Fluent App</a>
+                    <!-- TODO: Update Speak Up link when site is live -->
+                    <a href="https://speak-up-dhananjay.netlify.app" target="_blank">Speak Up</a>
+                    <a href="https://github.com/DJ6860" target="_blank">GitHub</a>
+                    <a href="mailto:Thambi405@outlook.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
